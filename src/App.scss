@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #292929fa;
+	background-color: #fff;
+	
+	.contentsText{
+		font-family: 'Noto Sans JP', sans-serif;
+		font-size: 1rem;
+	}
+}
+
+.App {
+	display: flex;
+}
+
+.container-main {
+	width: 100%;
+
+	@media (min-width: 480px) and (max-width: 768px) {
+		width: 100%;
+	}
+
+	@media (max-width: 479px) {
+		width: 100%;
+	}
+}
+
+.wrapper {
+	display: flex;
+
+	.layoutItems {
+		height: 800px;
+		padding: 10px;
+		margin: 10px;
+	}
+
+	@media (max-width: 479px) {
+		flex-direction: column;
+	}
+}
+
+.content-n-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: calc(100vh - 75px);
+}
