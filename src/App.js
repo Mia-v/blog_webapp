@@ -3,7 +3,7 @@ import './App.scss';
 import { Provider } from 'react-redux';
 import store from './redux/redux_all_in_one.js';
 import {useSelector} from 'react-redux';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
+import {Router, Route, Switch} from 'react-router-dom'; 
 
 
 import Navigation from "./components/Navigation/Navigation";
