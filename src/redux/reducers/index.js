@@ -1,3 +1,14 @@
 import { combineReducers } from 'redux';
+import { posts } from './postsReducer';
+//import { comments } from './commentsReducer';
 
-export default combineReducers;
+rootReducer = combineReducers({ posts})
+
+
+export default rootReducer;
+
+
+
+
+
+

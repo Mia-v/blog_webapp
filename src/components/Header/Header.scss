@@ -16,8 +16,16 @@ header{
 	height: 20vh;
 	padding: 10px;
 
+
 	h1{
 		padding-left: 50px;
+
+		@media (max-width: 479px) {
+			font-size: 3rem;
+			position: relative;
+			bottom: -25px;
+			left: 10px;
+		}
 	}
 }
 

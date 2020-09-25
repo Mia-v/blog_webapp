@@ -1,15 +1,13 @@
 import React from 'react';
 import './InpageNav.scss';
+import contentIsComing from './typing_machine.jpg';
 
 
 const InpageNav = () => {
 	return (
 		<div className="layoutItems inpageNav">
-			<h3>inpageNav</h3>
-				<div className="contentsText">Some text texttextte xttexttextt exttext text text text text</div>
-				<div className="contentsText">Some text texttextte xttexttextt exttext text text text text</div>
-				<div className="contentsText">Some text texttextte xttexttextt exttext text text text text</div>
-				<div className="contentsText">Some text texttextte xttexttextt exttext text text text text</div>
+			<h3>Some content is coming</h3>
+				<img src={contentIsComing} alt="" />
 		</div>
 	)
 }

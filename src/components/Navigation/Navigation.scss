@@ -1,7 +1,10 @@
 .menu-list {
 	display: block;
+	position: sticky;
+	top: 0;
+	left: 0;
 	width: 150px;
-	height: 100%;
+	height: 100vh;
 	box-sizing: border-box;
 	background-color: #292929fa;
 	transition: all .23s;
@@ -12,13 +15,16 @@
 	text-align: right;
 	line-height: 20px;
 	font-size: 14px;
-
+	
+	
+	
 	.nav-items {
 		text-decoration: none;
 		color: #fff;
 		font-size: 1rem;
-		padding: 10px;
+		margin: 15px 10px;
 	}
+	
 
 	@media (min-width: 480px) and (max-width: 768px) {
 		margin-left: -150px;
@@ -31,6 +37,7 @@
 
 .checkbox-menu {
 	display: none;
+	
 
 	&:checked ~ .menu-btn-cross span.one {
 		-webkit-transform: rotate(45deg);

@@ -3,7 +3,7 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <footer>footer</footer>
+    <footer>Created by me.</footer>
   )
 }
 

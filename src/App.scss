@@ -13,6 +13,10 @@ body {
 		font-family: 'Noto Sans JP', sans-serif;
 		font-size: 1rem;
 	}
+
+	h3{
+		text-align: center;
+	}
 }
 
 .App {
@@ -38,6 +42,12 @@ body {
 		height: 800px;
 		padding: 10px;
 		margin: 10px;
+	}
+
+	.smallPics{
+		width: 80%;
+		height: auto;
+		
 	}
 
 	@media (max-width: 479px) {
