@@ -27,29 +27,19 @@ const Navigation = () => {
 						className="nav-items home-link">
 							Home
 					</NavLink>
-					</li>
+				</li>
 				<li>
-					<NavLink to="/posts/1" 
+					<NavLink to="/about" 
 						activeStyle={{
 							fontWeight: "bold",
 							color: "grey"
 						}} 
-						className="nav-items">
-							Amsterdam
+						className="nav-items home-link">
+							About me
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/posts/2" 
-					activeStyle={{
-						fontWeight: "bold",
-						color: "grey"
-					}}
-					className="nav-items">
-						Barcelona
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/new"
+					<NavLink to="/posts/new"
 						activeStyle={{
 							fontWeight: "bold",
 							color: "grey"

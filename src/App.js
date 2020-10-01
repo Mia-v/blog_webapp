@@ -2,7 +2,6 @@ import React, { useState} from 'react';
 import './App.scss';
 import { Provider } from 'react-redux';
 import store from './redux/redux_all_in_one.js';
-import {useSelector} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
 
 
@@ -13,7 +12,7 @@ import Content from './components/Content/Content';
 import Additions from './components/Additions/Additions';
 import Footer from './components/Footer/Footer';
 import NewPost from './components/NewPost/NewPost';
-import Post from './components/Post/Post';
+import PostContainer from './containers/PostContainer.js';
 
 function App() {
 
@@ -28,8 +27,8 @@ function App() {
               <div className="wrapper">
                 <InpageNav />
                 <Switch>
-                  <Route path="/new" component={NewPost} />
-                  <Route path="/posts/:id" component = {Post}  />
+                  <Route path="/posts/new" component={NewPost} />
+                  <Route path="/posts/:id" component={PostContainer} />
                   <Route path="/" component = {Content} />
                 </Switch>
                 <Additions />

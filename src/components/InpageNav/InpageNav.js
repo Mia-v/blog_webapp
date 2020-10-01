@@ -1,15 +1,35 @@
 import React from 'react';
 import './InpageNav.scss';
-import contentIsComing from './typing_machine.jpg';
-
+import { Link, useRouteMatch } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 const InpageNav = () => {
+	const match = useRouteMatch();
+
+	const postId = window.location.hash.replace('#post-', '');
+
+	const posts = useSelector(state => state.posts);
+
 	return (
 		<div className="layoutItems inpageNav">
-			<h3>Some content is coming</h3>
-				<img src={contentIsComing} alt="" />
+			{postId
+				&& (
+					<div>
+						<a href="#title" className="">Up</a>
+            <a href="#comments">Comments</a>
+					</div>
+				)
+			}
+			{posts
+				.filter(post => {
+					if(!postId) return true;
+					return post.postId !== postId;
+				})
+				.map((post) => (<Link to={`/#post-${post.postId}`} className="link-to-post">{post.title}</Link>)
+
+				)}
 		</div>
 	)
 }
 
-export default InpageNav;
+export default InpageNav; 

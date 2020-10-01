@@ -13,18 +13,8 @@ const posts = useSelector(state => state.posts);
 		<div className="layoutItems content" >
 
 			{
-				posts.map(post => {
-					return (
-						<div className="firstPost">
-							<h2 className="postTitle" >{post.title}</h2>
-							<figure>
-								<img className="postImg" src={post.img} alt={post.title} />
-								<figcaption>{post.title}</figcaption>
-							</figure>
-							<p className="postTextContent">{post.textContent}</p>
-						</div>
-					)
-				})
+				posts.map(post => <Post key={post.postId} {...post}/>
+				)
 			}
 
 		</div>
