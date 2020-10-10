@@ -8,12 +8,13 @@ import { useSelector } from 'react-redux';
 function Post (post){
 
   
-  const { title, textContent, img }  = post;
+  const { title, tags, textContent, img }  = post;
   const isOnly = false;
   
   return (
     <div className="singlePost">
    <h2 className = "postTitle" id={`post-${post.postId}`}>{title}</h2>
+   <div className="tags">{post.tags.map( tag => <span className="spanTag">{tag}</span>)}</div>
     <figure>
         <img className = "postImg" src={img} alt={title} />
         <figcaption>{title}</figcaption>
