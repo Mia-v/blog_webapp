@@ -12,14 +12,14 @@ const Navigation = () => {
 	return (
 		<div className="container-menu">
 			<input checked={isChecked} onChange={handleToggle} type="checkbox" id="ckb" className="checkbox-menu" />
-			<label for="ckb" className="menu-btn-cross">
+			<label htmlFor="ckb" className="menu-btn-cross">
 				<span className="one"></span>
 				<span className="two"></span>
 				<span className="three"></span>
 			</label>
 			<ul className="menu-list" >
 				<li>
-					<NavLink to="/" 
+					<NavLink to="/" exact
 						activeStyle={{
 							fontWeight: "bold",
 							color: "grey"

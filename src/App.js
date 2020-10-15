@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 import './App.scss';
 import { Provider } from 'react-redux';
 import store from './redux/redux_all_in_one.js';
@@ -15,6 +15,7 @@ import NewPost from './components/NewPost/NewPost';
 import PostContainer from './containers/PostContainer.js';
 
 function App() {
+
 
   return (
     <Provider store={store}>
