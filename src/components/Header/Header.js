@@ -5,7 +5,9 @@ import './Header.scss';
 const Header = () => {
   return (
     <header>
-      <h1>Just do IT</h1>
+        <div className="background">
+          <h1>This blog was made as a educational project</h1>
+        </div>
     </header>
   )
 }

@@ -15,7 +15,7 @@ function Post(post) {
       <span></span>
       <h2 className="postTitle" id={`post-${post.postId}`}><Link to={`/posts/${post.postId}`} id="title">{title}</Link></h2>
       <div className="tags">{post.tags.map(tag => <span  className="spanTag">{tag}</span>)}</div>
-      <img className="postImg" src={`/static/media/${img}`} alt={title} />
+      <img className="postImg" src={`/img/${img}`} alt={title} />
       <p className="postTextContent">{textContent}</p>
     </div>
   );

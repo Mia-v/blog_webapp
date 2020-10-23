@@ -11,26 +11,23 @@ const Content = () => {
 	useEffect(() => {
 		
 		fetch('http://localhost:8000/posts')
-		
-		  .then(resp => { 
-			return  resp.json();
+			.then(resp => {
+				return resp.json();
 			})
-		  .then(payload => {
-			dispatch({
-			  type: 'POSTS_LOADED',
-			  payload,
+			.then(payload => {
+				dispatch({
+					type: 'POSTS_LOADED',
+					payload,
+				});
 			});
-		  });
-	  }, [dispatch, posts])
+	}, [dispatch, posts])
 
 	return (
 		<div className="layoutItems content" >
-
 			{
 				posts.map(post => <Post key={post.postId} {...post} />
 				)
 			}
-
 		</div> 
 	)
 }
