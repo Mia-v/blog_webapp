@@ -20,13 +20,13 @@ const Content = () => {
 					payload,
 				});
 			});
-	}, [dispatch, posts])
+	}, [])
 
 	return (
 		<div className="layoutItems content" >
 			{
-				posts.map(post => <Post key={post.postId} {...post} />
-				)
+				posts && (posts.map(post => <Post key={post.postId} {...post} />
+				))
 			}
 		</div> 
 	)

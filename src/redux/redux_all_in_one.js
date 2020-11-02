@@ -1,9 +1,5 @@
 import { createStore } from 'redux';
 
-// import amsterdamImg from './amsterdam.jpg';
-// import barcelonaImg from './barcelona.jpg';
-
-
 const initialState = {
     posts:[]
 };
@@ -11,13 +7,14 @@ const initialState = {
 
 // Actions
 
-const LIST = 'LIST';
+const POSTS_LOADED = 'POSTS_LOADED';
+const SINGLE_POST_LOADED = 'SINGLE_POST_LOADED';
 const NEW_POST = 'NEW_POST';
-const ADD_TAG = 'ADD_TAG';
+
 
 const showList = () => {
   return{
-    type: LIST,
+    type: POSTS_LOADED,
     payload: {
       state: initialState
     }
@@ -42,17 +39,20 @@ export const addNewPost = newPost => {
 
 const postsReducer = (state=initialState, action) => {
   switch (action.type) {
-    case LIST: {
-      return action.showList;
-    };
-
-    case 'POSTS_LOADED': {
+    case POSTS_LOADED: {
       return {
         posts: [
           ...action.payload,
         ],
       };
     };
+
+    case SINGLE_POST_LOADED: {
+      console.log(state);
+      return action.payload
+      
+
+    }
 
     case NEW_POST: {
       state.posts.push({
@@ -76,6 +76,3 @@ const store = createStore(postsReducer, initialState);
 
 
 export default store;
-
-//
-// 

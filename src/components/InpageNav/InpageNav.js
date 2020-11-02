@@ -22,13 +22,15 @@ const InpageNav = () => {
 					</div>
 				)
 			}
-			{posts
+			{posts 
+			&&
+			(posts
 				.filter(post => {
 					if(!postIdFromHash) return true;
 					return post.postId !== postIdFromHash;
 				})
 				.map((post) => (<a href={`/#post-${post.postId}`} key={post.postId} className="link-to-post">{post.title}</a>))
-			}
+			)}
 		</div>
 	)
 }
