@@ -49,7 +49,13 @@ const postsReducer = (state=initialState, action) => {
 
     case SINGLE_POST_LOADED: {
       console.log(state);
-      return action.payload
+      return {
+        ...state,
+        posts: [
+          ...state.posts,
+          action.payload
+        ]
+      }
       
 
     }

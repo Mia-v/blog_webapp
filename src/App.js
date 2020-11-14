@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navigation from "./components/Navigation/Navigation";
 import Header from './components/Header/Header';
 import InpageNav from './components/InpageNav/InpageNav';
-import Content from './components/Content/Content';
+import Content from './containers/Content/Content';
 import Additions from './components/Additions/Additions';
 import Footer from './components/Footer/Footer';
 import NewPost from './components/NewPost/NewPost';
